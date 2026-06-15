@@ -1,5 +1,5 @@
-name: moodle_clone
-description: "A Flutter project for the Moodle Clone coursework (referral/deferral)."
+name: moodle
+description: "A Flutter project for the Moodle coursework (referral/deferral)."
 publish_to: "none"
 
 version: 1.0.0+1

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
-import 'package:moodle_clone/main.dart';
+import 'package:moodle/main.dart';
 
 void main() {
   testWidgets('App renders dashboard and courses screen correctly',
@@ -14,16 +14,17 @@ void main() {
     });
 
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MoodleCloneApp());
+    await tester.pumpWidget(const MoodleApp());
 
-    // Verify that Moodle warning banner text exists.
-    expect(find.textContaining('Timeline Upgrade:'), findsOneWidget);
-
-    // Verify that Dashboard title and nav link exist (total 2).
+    // Verify that Dashboard title exists.
     expect(find.text('Dashboard'), findsNWidgets(2));
 
-    // Navigate to My Courses
-    await tester.tap(find.text('My Modules and Courses'));
+    // Open drawer
+    await tester.tap(find.byIcon(Icons.menu));
+    await tester.pumpAndSettle();
+
+    // Navigate to My Courses in drawer
+    await tester.tap(find.text('My courses'));
     await tester.pumpAndSettle();
 
     // Verify Courses page contains title

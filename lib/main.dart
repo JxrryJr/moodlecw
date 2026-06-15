@@ -3,16 +3,16 @@ import 'views/dashboard_view.dart';
 import 'views/courses_view.dart';
 
 void main() {
-  runApp(const MoodleCloneApp());
+  runApp(const MoodleApp());
 }
 
-class MoodleCloneApp extends StatelessWidget {
-  const MoodleCloneApp({Key? key}) : super(key: key);
+class MoodleApp extends StatelessWidget {
+  const MoodleApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Moodle Clone',
+      title: 'Moodle',
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
