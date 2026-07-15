@@ -31,7 +31,7 @@ class NavDrawer extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Michael Njini Here',
+                    'Michael Njini',
                     style: TextStyle(
                       color: moodleWhite,
                       fontWeight: FontWeight.bold,
