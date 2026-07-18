@@ -70,7 +70,7 @@ class DashboardView extends StatelessWidget {
               Text(
                 'Dashboard',
                 style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold,
                   color: moodlePurple,
                 ),
