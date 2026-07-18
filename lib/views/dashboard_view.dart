@@ -167,6 +167,23 @@ class DashboardView extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Const Text(
+                        'Upcoming Events',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: moodlePurple,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 44,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'no upcoming events',
+                            fillColor: moodleGrayBg,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -194,7 +211,7 @@ class DashboardView extends StatelessWidget {
                       ),
                       SizedBox(height: 12),
                       Text(
-                        'No announcements have been posted yet.',
+                        '(No announcements have been posted yet.)',
                         style: TextStyle(fontSize: 14, color: moodleTextMuted),
                       ),
                     ],
