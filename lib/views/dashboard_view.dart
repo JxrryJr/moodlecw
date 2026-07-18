@@ -149,7 +149,7 @@ class DashboardView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Upcoming events',
+                        'Calendar',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -158,7 +158,7 @@ class DashboardView extends StatelessWidget {
                       ),
                       SizedBox(height: 12),
                       Text(
-                        'placeholder for upcoming events.',
+                        'placeholder for calendar events.',
                         style: TextStyle(fontSize: 14, color: moodleTextMuted),
                       ),
                     ],
