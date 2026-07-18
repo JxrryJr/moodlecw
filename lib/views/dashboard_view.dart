@@ -255,17 +255,28 @@ class DashboardView extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
-                              DropdownButton(
-                                isExpanded: true,
-                                items: const [],
-                                value: null,
-                                onChanged: null,
-                              ),
-                              
-                              const SizedBox(height: 10),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.start,
+                                children: [
+                                  DropdownButton(
+                                    isExpanded: true,
+                                    items: const [],
+                                    value: null,
+                                    onChanged: null,
+                              ),
+                                ],
+                            ),
+                            ],
+                          ),
+                        ),
+                      ),
+                              const SizedBox(height: 10),
+                              Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                              Row(
                                 children: [
                                   TextButton(
                                     onPressed: () {},
@@ -273,7 +284,7 @@ class DashboardView extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                            ],
+                                    ],
                           ),
                         ),
                       ),
