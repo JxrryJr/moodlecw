@@ -118,7 +118,7 @@ class DashboardView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: moodlePurple,
                         ),
-                      )
+                      ),
                       SizedBox(
                         height: 44,
                         child: TextField(
