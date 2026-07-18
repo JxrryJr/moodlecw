@@ -162,12 +162,12 @@ class DashboardView extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                               borderSide: const BorderSide(color: moodleBorder),
                             ),
-                            filled: true,
                             fillColor: moodleGrayBg,
                           ),
                         ),
                       ),
-                      Const Text(
+                      const SizedBox(height: 24),
+                      Text(
                         'Upcoming Events',
                         style: TextStyle(
                           fontSize: 18,
@@ -180,7 +180,6 @@ class DashboardView extends StatelessWidget {
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: 'no upcoming events',
-                            fillColor: moodleGrayBg,
                           ),
                         ),
                       ),
