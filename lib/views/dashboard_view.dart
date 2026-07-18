@@ -120,6 +120,27 @@ class DashboardView extends StatelessWidget {
                           color: moodlePurple,
                         ),
                       ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Text('Left box content')
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Text('Right box content')
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
                       SizedBox(
                         height: 44,
                         child: TextField(
