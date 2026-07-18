@@ -96,18 +96,19 @@ class DashboardView extends StatelessWidget {
                           color: moodlePurple,
                         ),
                       ),
+                      const SizedBox(height: 12),
                       SizedBox(
                         height: 44,
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: 'Search courses, activities, etc.',
                             prefixIcon: const Icon(Icons.search_outlined),
+                            filled: true,
+                            fillColor: moodleGrayBg,
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
                               borderSide: const BorderSide(color: moodleBorder),
                             ),
-                            filled: true,
-                            fillColor: moodleGrayBg,
                           ),
                         ),
                       ),
@@ -120,18 +121,19 @@ class DashboardView extends StatelessWidget {
                           color: moodlePurple,
                         ),
                       ),
+                      const SizedBox(height: 12),
                       Row(
                         children: [
                           Expanded(
                             child: Card(
                               child: Padding(
-                                padding: const EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: DropdownButton(
-                                  items: null,
+                                  isExpanded: true,
+                                  items: const [],
                                   value: null,
                                   onChanged: null,
-                                  isExpanded: true,
-                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -139,47 +141,55 @@ class DashboardView extends StatelessWidget {
                           Expanded(
                             child: Card(
                               child: Padding(
-                                padding: const EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: DropdownButton(
-                                  items: null,
+                                  isExpanded: true,
+                                  items: const [],
                                   value: null,
                                   onChanged: null,
-                                  isExpanded: true,
-                                  ),
+                                ),
                               ),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 6),
+                      const SizedBox(height: 6),
                       SizedBox(
                         height: 44,
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: 'Search by activity type or name',
                             prefixIcon: const Icon(Icons.search_outlined),
+                            filled: true,
+                            fillColor: moodleGrayBg,
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
                               borderSide: const BorderSide(color: moodleBorder),
                             ),
-                            fillColor: moodleGrayBg,
                           ),
                         ),
                       ),
                       const SizedBox(height: 24),
-                      Text(
-                        'Upcoming Events',
+                      const Text(
+                        'Upcoming dates',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: moodlePurple,
                         ),
                       ),
+                      const SizedBox(height: 12),
                       SizedBox(
                         height: 44,
                         child: TextField(
                           decoration: InputDecoration(
-                            hintText: 'no upcoming events',
+                            hintText: 'No upcoming events',
+                            filled: true,
+                            fillColor: moodleGrayBg,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: const BorderSide(color: moodleBorder),
+                            ),
                           ),
                         ),
                       ),
@@ -218,19 +228,19 @@ class DashboardView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-              const Card(
+              Card(
                 color: moodleWhite,
                 elevation: 0,
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                   side: BorderSide(color: moodleBorder),
                   borderRadius: BorderRadius.all(Radius.circular(8)),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(24.0),
+                  padding: const EdgeInsets.all(24.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Calendar',
                         style: TextStyle(
                           fontSize: 18,
@@ -238,10 +248,17 @@ class DashboardView extends StatelessWidget {
                           color: moodlePurple,
                         ),
                       ),
-                      SizedBox(height: 12),
-                      Text(
-                        'placeholder for calendar events.',
-                        style: TextStyle(fontSize: 14, color: moodleTextMuted),
+                      const SizedBox(height: 12),
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: DropdownButton(
+                            isExpanded: true,
+                            items: const [],
+                            value: null,
+                            onChanged: null,
+                          ),
+                        ),
                       ),
                     ],
                   ),
