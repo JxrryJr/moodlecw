@@ -125,8 +125,13 @@ class DashboardView extends StatelessWidget {
                           Expanded(
                             child: Card(
                               child: Padding(
-                                padding: const EdgeInsets.all(12.0),
-                                child: Text('Left box content')
+                                padding: const EdgeInsets.all(5.0),
+                                child: DropdownButton(
+                                  items: null,
+                                  value: null,
+                                  onChanged: null,
+                                  isExpanded: true,
+                                  ),
                               ),
                             ),
                           ),
@@ -134,13 +139,18 @@ class DashboardView extends StatelessWidget {
                           Expanded(
                             child: Card(
                               child: Padding(
-                                padding: const EdgeInsets.all(12.0),
-                                child: Text('Right box content')
+                                padding: const EdgeInsets.all(5.0),
+                                child: DropdownButton(
+                                  items: null,
+                                  value: null,
+                                  onChanged: null,
+                                  isExpanded: true,
+                                  ),
                               ),
                             ),
                           ),
                         ],
-                      )
+                      ),
                       SizedBox(
                         height: 44,
                         child: TextField(
