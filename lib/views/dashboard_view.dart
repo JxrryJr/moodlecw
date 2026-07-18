@@ -111,6 +111,7 @@ class DashboardView extends StatelessWidget {
                           ),
                         ),
                       ),
+                      const SizedBox(height: 24),
                       const Text(
                         'Timeline',
                         style: TextStyle(
