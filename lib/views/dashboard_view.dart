@@ -125,7 +125,7 @@ class DashboardView extends StatelessWidget {
                           Expanded(
                             child: Card(
                               child: Padding(
-                                padding: const EdgeInsets.all(5.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: DropdownButton(
                                   items: null,
                                   value: null,
@@ -139,7 +139,7 @@ class DashboardView extends StatelessWidget {
                           Expanded(
                             child: Card(
                               child: Padding(
-                                padding: const EdgeInsets.all(5.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: DropdownButton(
                                   items: null,
                                   value: null,
@@ -151,6 +151,7 @@ class DashboardView extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(height: 6),
                       SizedBox(
                         height: 44,
                         child: TextField(
@@ -193,7 +194,7 @@ class DashboardView extends StatelessWidget {
                       ),
                       SizedBox(height: 12),
                       Text(
-                        'placeholder for latest announcements.',
+                        'No announcements have been posted yet.',
                         style: TextStyle(fontSize: 14, color: moodleTextMuted),
                       ),
                     ],
