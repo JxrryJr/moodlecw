@@ -28,7 +28,7 @@ class DashboardView extends StatelessWidget {
               ),
               const Text(
                 'Dashboard',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ],
           ),
