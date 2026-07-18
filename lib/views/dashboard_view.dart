@@ -28,7 +28,7 @@ class DashboardView extends StatelessWidget {
               ),
               const Text(
                 'Dashboard',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
               ),
             ],
           ),
@@ -89,7 +89,7 @@ class DashboardView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Feature Placeholder 1',
+                        'Search',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -98,7 +98,7 @@ class DashboardView extends StatelessWidget {
                       ),
                       SizedBox(height: 12),
                       Text(
-                        'This is a placeholder block.',
+                        'placeholder for search functionality.',
                         style: TextStyle(fontSize: 14, color: moodleTextMuted),
                       ),
                     ],
@@ -119,7 +119,7 @@ class DashboardView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Feature Placeholder 2',
+                        'Latest announcements',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -128,7 +128,37 @@ class DashboardView extends StatelessWidget {
                       ),
                       SizedBox(height: 12),
                       Text(
-                        'This is a placeholder block.',
+                        'placeholder for latest announcements.',
+                        style: TextStyle(fontSize: 14, color: moodleTextMuted),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 24),
+              Card(
+                color: moodleWhite,
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(color: moodleBorder),
+                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(24.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Upcoming events',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: moodlePurple,
+                        ),
+                      ),
+                      SizedBox(height: 12),
+                      Text(
+                        'placeholder for upcoming events.',
                         style: TextStyle(fontSize: 14, color: moodleTextMuted),
                       ),
                     ],
