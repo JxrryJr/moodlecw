@@ -62,12 +62,12 @@ class DashboardView extends StatelessWidget {
       drawer: const NavDrawer(),
       body: Container(
         color: moodleBg,
-        child: const SingleChildScrollView(
-          padding: EdgeInsets.all(24.0),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
+              const Text(
                 'Dashboard',
                 style: TextStyle(
                   fontSize: 32,
@@ -75,20 +75,20 @@ class DashboardView extends StatelessWidget {
                   color: moodlePurple,
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Card(
                 color: moodleWhite,
                 elevation: 0,
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                   side: BorderSide(color: moodleBorder),
                   borderRadius: BorderRadius.all(Radius.circular(8)),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(24.0),
+                  padding: const EdgeInsets.all(24.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Search',
                         style: TextStyle(
                           fontSize: 18,
@@ -96,17 +96,27 @@ class DashboardView extends StatelessWidget {
                           color: moodlePurple,
                         ),
                       ),
-                      SizedBox(height: 12),
-                      Text(
-                        'placeholder for search functionality.',
-                        style: TextStyle(fontSize: 14, color: moodleTextMuted),
+                      SizedBox(
+                        height: 44,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Search courses, activities, etc.',
+                            prefixIcon: const Icon(Icons.search_outlined),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: const BorderSide(color: moodleBorder),
+                            ),
+                            filled: true,
+                            fillColor: moodleGrayBg,
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: 24),
-              Card(
+              const SizedBox(height: 24),
+              const Card(
                 color: moodleWhite,
                 elevation: 0,
                 shape: RoundedRectangleBorder(
@@ -135,8 +145,8 @@ class DashboardView extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 24),
-              Card(
+              const SizedBox(height: 24),
+              const Card(
                 color: moodleWhite,
                 elevation: 0,
                 shape: RoundedRectangleBorder(
@@ -165,8 +175,8 @@ class DashboardView extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 24),
-              Card(
+              const SizedBox(height: 24),
+              const Card(
                 color: moodleWhite,
                 elevation: 0,
                 shape: RoundedRectangleBorder(
