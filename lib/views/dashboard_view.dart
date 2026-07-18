@@ -111,6 +111,29 @@ class DashboardView extends StatelessWidget {
                           ),
                         ),
                       ),
+                      const Text(
+                        'Timeline',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: moodlePurple,
+                        ),
+                      )
+                      SizedBox(
+                        height: 44,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Search by activity type or name',
+                            prefixIcon: const Icon(Icons.search_outlined),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: const BorderSide(color: moodleBorder),
+                            ),
+                            filled: true,
+                            fillColor: moodleGrayBg,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
