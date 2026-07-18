@@ -252,11 +252,28 @@ class DashboardView extends StatelessWidget {
                       Card(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: DropdownButton(
-                            isExpanded: true,
-                            items: const [],
-                            value: null,
-                            onChanged: null,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              DropdownButton(
+                                isExpanded: true,
+                                items: const [],
+                                value: null,
+                                onChanged: null,
+                              ),
+                              
+                              const SizedBox(height: 10),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.start,
+                                children: [
+                                  TextButton(
+                                    onPressed: () {},
+                                    child: const Text('New event'),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ),
