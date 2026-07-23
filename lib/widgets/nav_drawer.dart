@@ -9,6 +9,7 @@ class NavDrawer extends StatelessWidget {
     final currentRoute = ModalRoute.of(context)?.settings.name ?? '/';
     final bool isDashboard = currentRoute == '/';
     final bool isCourses = currentRoute == '/courses';
+    final bool isProfile = currentRoute == '/profile';
 
     return Drawer(
       backgroundColor: moodlePurple,
@@ -86,6 +87,21 @@ class NavDrawer extends StatelessWidget {
                 Navigator.pop(context);
                 if (!isCourses) {
                   Navigator.pushReplacementNamed(context, '/courses');
+                }
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_outline, color: moodleWhite),
+              title: const Text(
+                'Profile',
+                style: TextStyle(color: moodleWhite, fontSize: 16),
+              ),
+              selected: isProfile,
+              selectedTileColor: Colors.white24,
+              onTap: () {
+                Navigator.pop(context);
+                if (!isProfile) {
+                  Navigator.pushReplacementNamed(context, '/profile');
                 }
               },
             ),
