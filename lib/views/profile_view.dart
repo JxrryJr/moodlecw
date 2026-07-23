@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moodle/constants.dart';
 import 'package:moodle/widgets/nav_drawer.dart';
+import 'package:moodle/widgets/profile_avatar_button.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({Key? key}) : super(key: key);
@@ -46,17 +47,7 @@ class ProfileView extends StatelessWidget {
             icon: const Icon(Icons.chat_bubble_outline),
             onPressed: () {},
           ),
-          const SizedBox(width: 8),
-          const CircleAvatar(
-            radius: 18,
-            backgroundColor: moodleGrayBg,
-            foregroundColor: moodlePurple,
-            child: Text(
-              'MN',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
-            ),
-          ),
-          const SizedBox(width: 16),
+          const ProfileAvatarButton(),
         ],
       ),
       drawer: const NavDrawer(),
