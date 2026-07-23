@@ -249,45 +249,7 @@ class DashboardView extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Row(
-                                children: [
-                                  DropdownButton(
-                                    isExpanded: true,
-                                    items: const [],
-                                    value: null,
-                                    onChanged: null,
-                              ),
-                                ],
-                            ),
-                            ],
-                          ),
-                        ),
-                      ),
-                              const SizedBox(height: 10),
-                              Card(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                                    children: [
-                              Row(
-                                children: [
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: const Text('New event'),
-                                  ),
-                                ],
-                              ),
-                                    ],
-                          ),
-                        ),
-                      ),
+                      const _MonthCalendarCard(),
                     ],
                   ),
                 ),
@@ -325,6 +287,162 @@ class DashboardView extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _MonthCalendarCard extends StatefulWidget {
+  const _MonthCalendarCard();
+
+  @override
+  State<_MonthCalendarCard> createState() => _MonthCalendarCardState();
+}
+
+class _MonthCalendarCardState extends State<_MonthCalendarCard> {
+  late DateTime _month;
+
+  static const List<String> _weekdayLabels = <String>[
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat',
+    'Sun',
+  ];
+
+  static const List<String> _monthNames = <String>[
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    final now = DateTime.now();
+    _month = DateTime(now.year, now.month, 1);
+  }
+
+  void _changeMonth(int delta) {
+    setState(() {
+      _month = DateTime(_month.year, _month.month + delta, 1);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final firstWeekday = _month.weekday;
+    final daysInMonth = DateTime(_month.year, _month.month + 1, 0).day;
+    final leadingEmptyCells = firstWeekday - DateTime.monday;
+    final totalCells = leadingEmptyCells + daysInMonth;
+    final trailingEmptyCells = (7 - (totalCells % 7)) % 7;
+    final monthLabel = '${_monthNames[_month.month - 1]} ${_month.year}';
+
+    return Container(
+      decoration: BoxDecoration(
+        color: moodleGrayBg,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      padding: const EdgeInsets.all(12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              IconButton(
+                tooltip: 'Previous month',
+                icon: const Icon(Icons.chevron_left),
+                onPressed: () => _changeMonth(-1),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    monthLabel,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: moodlePurple,
+                    ),
+                  ),
+                ),
+              ),
+              IconButton(
+                tooltip: 'Next month',
+                icon: const Icon(Icons.chevron_right),
+                onPressed: () => _changeMonth(1),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Row(
+            children: _weekdayLabels
+                .map(
+                  (label) => Expanded(
+                    child: Center(
+                      child: Text(
+                        label,
+                        style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: moodleTextMuted,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+                .toList(),
+          ),
+          const SizedBox(height: 8),
+          GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: totalCells + trailingEmptyCells,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 7,
+              mainAxisSpacing: 6,
+              crossAxisSpacing: 6,
+              childAspectRatio: 1.15,
+            ),
+            itemBuilder: (context, index) {
+              final dayNumber = index - leadingEmptyCells + 1;
+              if (index < leadingEmptyCells || dayNumber > daysInMonth) {
+                return const SizedBox.shrink();
+              }
+
+              final isToday = DateTime.now().year == _month.year &&
+                  DateTime.now().month == _month.month &&
+                  DateTime.now().day == dayNumber;
+
+              return Container(
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: isToday ? moodlePurple : moodleWhite,
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(color: moodleBorder),
+                ),
+                child: Text(
+                  '$dayNumber',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: isToday ? moodleWhite : moodleTextDark,
+                  ),
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
