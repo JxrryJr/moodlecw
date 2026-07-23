@@ -66,17 +66,6 @@ class NavDrawer extends StatelessWidget {
               },
             ),
             ListTile(
-              leading:
-                  const Icon(Icons.calendar_month_outlined, color: moodleWhite),
-              title: const Text(
-                'Calendar',
-                style: TextStyle(color: moodleWhite, fontSize: 16),
-              ),
-              onTap: () {
-                // placeholder
-              },
-            ),
-            ListTile(
               leading: const Icon(Icons.school_outlined, color: moodleWhite),
               title: const Text(
                 'My courses',
