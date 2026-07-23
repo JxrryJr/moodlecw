@@ -153,7 +153,7 @@ class ProfileView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'Student info',
+                        'Page info',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
