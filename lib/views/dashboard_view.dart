@@ -317,6 +317,8 @@ class _TimelineEntry extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMissedDeadline = detail.toLowerCase().contains('missed deadline');
+
     return Container(
       decoration: BoxDecoration(
         color: moodleGrayBg,
@@ -326,11 +328,13 @@ class _TimelineEntry extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       child: Row(
         children: [
-          const Icon(
-            Icons.warning_amber_rounded,
-            color: Colors.redAccent,
-          ),
-          const SizedBox(width: 12),
+          if (isMissedDeadline) ...[
+            const Icon(
+              Icons.warning_amber_rounded,
+              color: Colors.redAccent,
+            ),
+            const SizedBox(width: 12),
+          ],
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
