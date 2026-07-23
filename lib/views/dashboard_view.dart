@@ -170,19 +170,20 @@ class DashboardView extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      SizedBox(
-                        height: 44,
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'No upcoming events',
-                            filled: true,
-                            fillColor: moodleGrayBg,
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: moodleBorder),
-                            ),
+                      const Column(
+                        children: [
+                          _UpcomingExamEntry(
+                            moduleName: 'Programming',
+                            assessmentTitle: 'Coursework Report',
+                            dueText: 'Due 3rd August 2026',
                           ),
-                        ),
+                          SizedBox(height: 10),
+                          _UpcomingExamEntry(
+                            moduleName: 'Operating Systems and Internetworking',
+                            assessmentTitle: 'Final Exam',
+                            dueText: 'Due 28th July 2026',
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -347,6 +348,60 @@ class _TimelineEntry extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _UpcomingExamEntry extends StatelessWidget {
+  const _UpcomingExamEntry({
+    required this.moduleName,
+    required this.assessmentTitle,
+    required this.dueText,
+  });
+
+  final String moduleName;
+  final String assessmentTitle;
+  final String dueText;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: moodleGrayBg,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: moodleBorder),
+      ),
+      padding: const EdgeInsets.all(12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            assessmentTitle,
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: moodleTextDark,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            moduleName,
+            style: const TextStyle(
+              fontSize: 13,
+              color: moodleTextMuted,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            dueText,
+            style: const TextStyle(
+              fontSize: 13,
+              color: moodleTextDark,
             ),
           ),
         ],
