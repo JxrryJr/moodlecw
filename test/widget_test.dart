@@ -16,6 +16,11 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MoodleApp());
 
+    // Verify login page renders and enter dashboard.
+    expect(find.text('Student modules: 2025/26'), findsOneWidget);
+    await tester.tap(find.text('Enter Dashboard'));
+    await tester.pumpAndSettle();
+
     // Verify that Dashboard title exists.
     expect(find.text('Dashboard'), findsNWidgets(2));
 
@@ -30,5 +35,8 @@ void main() {
     // Verify Courses page contains module content
     expect(find.text('Operating Systems and Internetworking'), findsOneWidget);
     expect(find.text('Programming'), findsOneWidget);
+    expect(find.text('Database Systems Development'), findsOneWidget);
+    expect(find.text('Data Analytics and Visualisations'), findsOneWidget);
+    expect(find.text('Software Engineering, Theory and Practice'), findsOneWidget);
   });
 }

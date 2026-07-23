@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moodle/views/login_view.dart';
 import 'package:moodle/views/dashboard_view.dart';
 import 'package:moodle/views/courses_view.dart';
 import 'package:moodle/views/profile_view.dart';
@@ -24,8 +25,9 @@ class MoodleApp extends StatelessWidget {
           surface: moodleSurface,
         ),
       ),
-      initialRoute: '/',
+      initialRoute: '/login',
       routes: {
+        '/login': (context) => const LoginView(),
         '/': (context) => const DashboardView(),
         '/courses': (context) => const CoursesView(),
         '/profile': (context) => const ProfileView(),
