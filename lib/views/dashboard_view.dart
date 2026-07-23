@@ -276,9 +276,18 @@ class DashboardView extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 12),
-                      Text(
-                        'placeholder dropdown list for timeline events.',
-                        style: TextStyle(fontSize: 14, color: moodleTextMuted),
+                      Column(
+                        children: const [
+                          _TimelineEntry(
+                            moduleName: 'Operating systems and Internetowrking',
+                            detail: 'Missed deadline',
+                          ),
+                          SizedBox(height: 12),
+                          _TimelineEntry(
+                            moduleName: 'Programming',
+                            detail: 'Missed deadline',
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -287,6 +296,60 @@ class DashboardView extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _TimelineEntry extends StatelessWidget {
+  const _TimelineEntry({
+    required this.moduleName,
+    required this.detail,
+  });
+
+  final String moduleName;
+  final String detail;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: moodleGrayBg,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: moodleBorder),
+      ),
+      padding: const EdgeInsets.all(12),
+      child: Row(
+        children: [
+          const Icon(
+            Icons.warning_amber_rounded,
+            color: Colors.redAccent,
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  moduleName,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: moodleTextDark,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  detail,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    color: Colors.redAccent,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
