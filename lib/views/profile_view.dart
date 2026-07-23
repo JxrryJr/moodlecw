@@ -127,10 +127,14 @@ class ProfileView extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 24),
-                      _ProfileDetailRow(label: 'Email', value: 'up2273239@myport.ac.uk'),
-                      _ProfileDetailRow(label: 'Course', value: 'BSc Computer Science'),
-                      _ProfileDetailRow(label: 'Year of study', value: 'Year 2'),
-                      _ProfileDetailRow(label: 'Student ID', value: 'up2273239'),
+                      _ProfileDetailRow(
+                          label: 'Email', value: 'up2273239@myport.ac.uk'),
+                      _ProfileDetailRow(
+                          label: 'Course', value: 'BSc Computer Science'),
+                      _ProfileDetailRow(
+                          label: 'Year of study', value: 'Year 2'),
+                      _ProfileDetailRow(
+                          label: 'Student ID', value: 'up2273239'),
                     ],
                   ),
                 ),
