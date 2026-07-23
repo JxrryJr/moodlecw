@@ -84,7 +84,7 @@ class LoginView extends StatelessWidget {
                       onPressed: () =>
                           Navigator.pushReplacementNamed(context, '/'),
                       child: const Text(
-                        'Enter Dashboard',
+                        'Enter Moodle',
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w600,
