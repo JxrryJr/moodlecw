@@ -10,6 +10,7 @@ class NavDrawer extends StatelessWidget {
     final bool isDashboard = currentRoute == '/';
     final bool isCourses = currentRoute == '/courses';
     final bool isProfile = currentRoute == '/profile';
+    final bool isAssessments = currentRoute == '/assessments';
 
     return Drawer(
       backgroundColor: moodlePurple,
@@ -87,6 +88,21 @@ class NavDrawer extends StatelessWidget {
                 Navigator.pop(context);
                 if (!isCourses) {
                   Navigator.pushReplacementNamed(context, '/courses');
+                }
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.assignment_outlined, color: moodleWhite),
+              title: const Text(
+                'Assessments',
+                style: TextStyle(color: moodleWhite, fontSize: 16),
+              ),
+              selected: isAssessments,
+              selectedTileColor: Colors.white24,
+              onTap: () {
+                Navigator.pop(context);
+                if (!isAssessments) {
+                  Navigator.pushReplacementNamed(context, '/assessments');
                 }
               },
             ),

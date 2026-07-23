@@ -81,7 +81,8 @@ class LoginView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
-                      onPressed: () => Navigator.pushReplacementNamed(context, '/'),
+                      onPressed: () =>
+                          Navigator.pushReplacementNamed(context, '/'),
                       child: const Text(
                         'Enter Dashboard',
                         style: TextStyle(

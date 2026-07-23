@@ -37,6 +37,7 @@ void main() {
     expect(find.text('Programming'), findsOneWidget);
     expect(find.text('Database Systems Development'), findsOneWidget);
     expect(find.text('Data Analytics and Visualisations'), findsOneWidget);
-    expect(find.text('Software Engineering, Theory and Practice'), findsOneWidget);
+    expect(
+        find.text('Software Engineering, Theory and Practice'), findsOneWidget);
   });
 }
