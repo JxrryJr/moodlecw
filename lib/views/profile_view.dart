@@ -52,7 +52,7 @@ class ProfileView extends StatelessWidget {
             backgroundColor: moodleGrayBg,
             foregroundColor: moodlePurple,
             child: Text(
-              'YH',
+              'MN',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
             ),
           ),
@@ -95,7 +95,7 @@ class ProfileView extends StatelessWidget {
                             backgroundColor: moodleGrayBg,
                             foregroundColor: moodlePurple,
                             child: Text(
-                              'YH',
+                              'MN',
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
@@ -107,7 +107,7 @@ class ProfileView extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
                               Text(
-                                'Yohannes Hailu',
+                                'Michael Njini',
                                 style: TextStyle(
                                   fontSize: 22,
                                   fontWeight: FontWeight.bold,
@@ -162,7 +162,7 @@ class ProfileView extends StatelessWidget {
                       ),
                       SizedBox(height: 12),
                       Text(
-                        'This is a static profile page for student information. It keeps the same Moodle theme, logo, and drawer navigation as the rest of the app.',
+                        'This is a static profile page for student information.',
                         style: TextStyle(fontSize: 14, color: moodleTextDark),
                       ),
                     ],
