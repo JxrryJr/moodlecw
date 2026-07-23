@@ -23,21 +23,21 @@ class CoursesView extends StatelessWidget {
     ),
     _CourseModule(
       code: 'COMP210',
-      title: 'Database Systems',
+      title: 'Database Systems Development',
       semester: 'Semester 1',
       credits: '20 credits',
       status: 'Completed',
     ),
     _CourseModule(
       code: 'COMP217',
-      title: 'Web Development',
+      title: 'Data Analytics and Visualisations',
       semester: 'Semester 1',
       credits: '20 credits',
       status: 'Completed',
     ),
     _CourseModule(
       code: 'COMP230',
-      title: 'Software Engineering',
+      title: 'Software Engineering, Theory and Practice',
       semester: 'Semester 2',
       credits: '20 credits',
       status: 'In progress',
@@ -106,7 +106,7 @@ class CoursesView extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               const Text(
-                'A dummy overview of the modules you are currently taking.',
+                'An overview of the modules I am taking.',
                 style: TextStyle(fontSize: 16, color: moodleTextDark),
               ),
               const SizedBox(height: 24),
@@ -140,7 +140,7 @@ class CoursesView extends StatelessWidget {
                                       ),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        module.code.substring(0, 4),
+                                        'CS',
                                         style: const TextStyle(
                                           color: moodleWhite,
                                           fontWeight: FontWeight.bold,
