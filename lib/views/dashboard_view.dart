@@ -290,7 +290,7 @@ class DashboardView extends StatelessWidget {
                           SizedBox(height: 12),
                           _TimelineEntry(
                             moduleName: 'Programming coursework',
-                            detail: 'Due 25th July',
+                            detail: 'Due 29th July',
                           ),
                         ],
                       ),
