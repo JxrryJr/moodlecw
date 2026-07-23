@@ -92,7 +92,8 @@ class NavDrawer extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.assignment_outlined, color: moodleWhite),
+              leading:
+                  const Icon(Icons.assignment_outlined, color: moodleWhite),
               title: const Text(
                 'Assessments',
                 style: TextStyle(color: moodleWhite, fontSize: 16),

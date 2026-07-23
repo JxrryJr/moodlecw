@@ -8,27 +8,27 @@ class AssessmentsView extends StatelessWidget {
 
   static const List<_AssessmentItem> _upcoming = <_AssessmentItem>[
     _AssessmentItem(
-      module: 'Operating Systems and Internetworking',
-      title: 'Coursework 2 Report',
-      due: 'Due 29 Jul 2026',
+      module: 'Programming',
+      title: 'Coursework Report',
+      due: 'Due 3rd August 2026',
     ),
     _AssessmentItem(
-      module: 'Programming',
-      title: 'Lab Portfolio Submission',
-      due: 'Due 31 Jul 2026',
+      module: 'Operating Systems and Internetworking',
+      title: 'Final Exam',
+      due: 'Due 28th July 2026',
     ),
   ];
 
   static const List<_AssessmentItem> _missed = <_AssessmentItem>[
     _AssessmentItem(
       module: 'Software Engineering, Theory and Practice',
-      title: 'Sprint Review Presentation',
-      due: 'Missed 18 Jul 2026',
+      title: 'Coursework',
+      due: 'Missed 18 July 2026',
     ),
     _AssessmentItem(
       module: 'Database Systems Development',
       title: 'SQL Practical Test',
-      due: 'Missed 20 Jul 2026',
+      due: 'Missed 20 April 2026',
     ),
   ];
 
@@ -36,12 +36,12 @@ class AssessmentsView extends StatelessWidget {
     _AssessmentItem(
       module: 'Data Analytics and Visualisations',
       title: 'Dashboard Build Task',
-      due: 'Completed 08 Jul 2026',
+      due: 'Completed 08 July 2026',
     ),
     _AssessmentItem(
       module: 'Programming',
       title: 'Algorithm Worksheet',
-      due: 'Completed 11 Jul 2026',
+      due: 'Completed 11 January 2026',
     ),
   ];
 
